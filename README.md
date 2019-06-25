@@ -21,8 +21,8 @@ git checkout mcu
 ```
 
 ### install
-```
 
+```
 npm install bower -g
 
 npm run get
@@ -30,7 +30,7 @@ npm run get
 
 ### edit
 ```
-./server/index.js 
+./server/index.js
 
 const argv = minimst(process.argv.slice(2), {
     default: {
@@ -42,9 +42,8 @@ const argv = minimst(process.argv.slice(2), {
 ```
 
 ### run
-```
- node index.js 
-
+```sh
+npm start
 ```
 
 

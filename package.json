@@ -1,21 +1,24 @@
 {
-  "name": "lycamplus-groupcall",
+  "name": "kurento-group-call-node",
   "version": "1.0.0",
-  "description": "lycamplus group call",
-  "main": "index.js",
-  "author": "chapin",
+  "main": "lib",
+  "bin": "server.js",
+  "author": "Jesús Leganés-Combarro 'piranna' <piranna@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "get": "npm install && npm install -g bower && cd ./server/static && bower install"
+    "install": "cd static && bower install"
   },
   "dependencies": {
-    "babel-polyfill": "^6.23.0",
-    "babel-preset-es2015": "^6.22.0",
-    "babel-preset-stage-3": "^6.22.0",
-    "babel-register": "^6.23.0",
-    "express": "^4.15.0",
+    "@babel/core": "^7.4.5",
+    "@babel/polyfill": "^7.4.4",
+    "@babel/register": "^7.4.4",
+    "express": "^4.17.1",
     "kurento-client": "6.6.0",
     "minimist": "^1.2.0",
-    "socket.io": "^2.0.3"
+    "socket.io": "^2.2.0"
+  },
+  "devDependencies": {
+    "@babel/preset-env": "^7.4.5",
+    "bower": "^1.8.8"
   }
 }

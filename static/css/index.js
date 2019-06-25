@@ -31,7 +31,7 @@ export default StyleSheet.create({
     'height': [{ 'unit': 'em', 'value': 1.25 }],
     'background': '#fff',
     'background': '-webkit-gradient(linear, 0% 0%, 0% 100%, from(#ededed),
-		to(#fbfbfb))',
+        to(#fbfbfb))',
     'WebkitAppearance': 'none',
     'WebkitBoxShadow': '1px 1px 1px #fff',
     'WebkitBorderRadius': '0.25em',
@@ -48,7 +48,7 @@ export default StyleSheet.create({
     'height': [{ 'unit': 'em', 'value': 1.25 }],
     'background': '#fff',
     'background': '-webkit-gradient(linear, 0% 0%, 0% 100%, from(#ededed),
-		to(#fbfbfb))',
+        to(#fbfbfb))',
     'WebkitAppearance': 'none',
     'WebkitBoxShadow': '1px 1px 1px #fff',
     'WebkitBorderRadius': '0.25em',
@@ -78,8 +78,8 @@ export default StyleSheet.create({
   'select': {
     'border': [{ 'unit': 'px', 'value': 1 }, { 'unit': 'string', 'value': 'solid' }, { 'unit': 'string', 'value': '#D0D0D0' }],
     'background': 'url(http://www.quilor.com/i/select.png) no-repeat right
-		center, -webkit-gradient(linear, 0% 0%, 0% 100%, from(#fbfbfb),
-		to(#ededed))',
+        center, -webkit-gradient(linear, 0% 0%, 0% 100%, from(#fbfbfb),
+        to(#ededed))',
     'background': '-moz-linear-gradient(19% 75% 90deg, #ededed, #fbfbfb)',
     'WebkitBoxShadow': '0 1px 2px rgba(0, 0, 0, .05)',
     'MozBoxShadow': '0 1px 2px rgba(0, 0, 0, .05)',
@@ -98,7 +98,7 @@ export default StyleSheet.create({
     'background': 'white',
     'borderRadius': '3px',
     'WebkitBoxShadow': '0 0 200px rgba(255, 255, 255, 0.5), 0 1px 2px
-		rgba(0, 0, 0, 0.3)',
+        rgba(0, 0, 0, 0.3)',
     'boxShadow': [{ 'unit': 'px', 'value': 0 }, { 'unit': 'px', 'value': 0 }, { 'unit': 'px', 'value': 200 }, { 'unit': 'string', 'value': 'rgba(255, 255, 255, 0.5)' }, { 'unit': 'string', 'value': 'rgba(255, 255, 255, 0.5),' }, { 'unit': 'px', 'value': 0 }, { 'unit': 'px', 'value': 1 }, { 'unit': 'px', 'value': 2 }],
     // Transition
     'WebkitTransition': 'all 0.3s linear',
@@ -285,7 +285,7 @@ export default StyleSheet.create({
     'padding': [{ 'unit': 'px', 'value': 5 }, { 'unit': 'px', 'value': 5 }, { 'unit': 'px', 'value': 5 }, { 'unit': 'px', 'value': 5 }],
     'borderRadius': '10px',
     'WebkitBoxShadow': '0 0 200px rgba(255, 255, 255, 0.5), 0 1px 2px
-		rgba(0, 0, 0, 0.3)',
+        rgba(0, 0, 0, 0.3)',
     'boxShadow': [{ 'unit': 'px', 'value': 0 }, { 'unit': 'px', 'value': 0 }, { 'unit': 'px', 'value': 200 }, { 'unit': 'string', 'value': 'rgba(255, 255, 255, 0.5)' }, { 'unit': 'string', 'value': 'rgba(255, 255, 255, 0.5),' }, { 'unit': 'px', 'value': 0 }, { 'unit': 'px', 'value': 1 }, { 'unit': 'px', 'value': 2 }],
     // Transition
     'WebkitTransition': 'all 0.3s linear',
