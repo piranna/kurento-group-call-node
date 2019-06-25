@@ -15,9 +15,6 @@
  *
  */
 
-const PARTICIPANT_MAIN_CLASS = 'participant main';
-const PARTICIPANT_CLASS = 'participant';
-
 /**
  * Creates a video element for a new participant
  *
@@ -28,19 +25,11 @@ const PARTICIPANT_CLASS = 'participant';
  */
 function Participant(name) {
   this.name = name;
-  var container = document.createElement('div');
-  container.className = isPresentMainParticipant() ? PARTICIPANT_CLASS : PARTICIPANT_MAIN_CLASS;
-  container.id = name;
-  var span = document.createElement('span');
   var video = document.createElement('video');
   var rtcPeer;
 
-  container.appendChild(video);
-  container.appendChild(span);
-  container.onclick = switchContainerClass;
-  document.getElementById('participants').appendChild(container);
-
-  span.appendChild(document.createTextNode(name));
+  video.onclick = toggleVideoMuted;
+  document.getElementById('participants').appendChild(video);
 
   video.id = 'video-' + name;
   video.autoplay = true;
@@ -48,27 +37,15 @@ function Participant(name) {
 
 
   this.getElement = function() {
-    return container;
+    return video;
   }
 
   this.getVideoElement = function() {
     return video;
   }
 
-  function switchContainerClass() {
-    if (container.className === PARTICIPANT_CLASS) {
-      var elements = Array.prototype.slice.call(document.getElementsByClassName(PARTICIPANT_MAIN_CLASS));
-      elements.forEach(function(item) {
-          item.className = PARTICIPANT_CLASS;
-      });
-      container.className = PARTICIPANT_MAIN_CLASS;
-    } else {
-      container.className = PARTICIPANT_CLASS;
-    }
-  }
-
-  function isPresentMainParticipant() {
-    return ((document.getElementsByClassName(PARTICIPANT_MAIN_CLASS)).length != 0);
+  function toggleVideoMuted() {
+    video.muted = !video.muted
   }
 
   this.offerToReceiveVideo = function(error, offerSdp, wp){
@@ -99,6 +76,6 @@ function Participant(name) {
   this.dispose = function() {
     console.log('Disposing participant ' + this.name);
     this.rtcPeer.dispose();
-    container.parentNode.removeChild(container);
+    video.parentNode.removeChild(video);
   };
 }
