@@ -15,6 +15,9 @@
  *
  */
 
+const defaultVideoStyle = 'border: 5px solid red;'
+
+
 /**
  * Creates a video element for a new participant
  *
@@ -34,6 +37,7 @@ function Participant(name) {
   video.id = 'video-' + name;
   video.autoplay = true;
   video.controls = false;
+  video.style = defaultVideoStyle
 
 
   this.getElement = function() {
@@ -46,6 +50,8 @@ function Participant(name) {
 
   function toggleVideoMuted() {
     video.muted = !video.muted
+
+    video.style = video.muted ? '' : defaultVideoStyle
   }
 
   this.offerToReceiveVideo = function(error, offerSdp, wp){
